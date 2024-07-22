@@ -61,7 +61,7 @@ class ApolloClient {
 
 		//check if we should you persisted queries and if the code run on the server
 		// create a uri parameter for Apollo and add a timeout
-		if (!!(options?.automaticPersistedQueries && !process.server)) {
+		if (options?.automaticPersistedQueries && !process.server) {
 			//creates persisted link, adding a hash to query
 			const linkChain = createPersistedQueryLink({
 				sha256,
