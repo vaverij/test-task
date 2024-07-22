@@ -32,7 +32,6 @@ class ApolloClient {
 	): Apollo<NormalizedCacheObject> => {
 		// console.log("CREATE CLIENT");
 		let link = this.createLink(uri, options);
-		console.log(link);
 		//declaring the Apollo client
 		const client = new Apollo({
 			link,
@@ -89,7 +88,7 @@ class ApolloClient {
 		// console.log("LOAD CLIENT");
 		// check if the client already loaded and is running on the server
 		if (!globalApolloClient) {
-			console.log("globalApolloClient not created");
+			//console.log("globalApolloClient not created");
 			globalApolloClient = this.createClient(uri, options);
 		}
 		return globalApolloClient;
