@@ -17,6 +17,7 @@
     7. loadClient is a tricky one - I'm not sure I like the code, but here's definately something's going on. Probably this is codeed to keep the correct cache and state. IF statement can be written by basically leaving "if(uri)".
         In the final result I left only validation if the globalApolloClient was created. I think using the same client (rather than creating it each time) is better in context of my task
     8. In handleRequest instead of returning undefined I'd throw an error. It' s a better practice.
+    9. In CreateClient I commented out the fetch-policy to cache results for a better speed.
 
 
     the "good file" will be named as "plugins/apollo.ts" and "utils/apollo-client.ts" - this is only for keeping track of what's changed
