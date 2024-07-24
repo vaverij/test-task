@@ -39,7 +39,7 @@ class ApolloClient {
 			ssrMode: process.server || false,
 			defaultOptions: {
 				query: {
-					// fetchPolicy: "no-cache",
+					fetchPolicy: "no-cache",
 					errorPolicy: "all",
 				},
 			},

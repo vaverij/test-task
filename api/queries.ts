@@ -19,6 +19,17 @@ export const GET_POST_IMAGE_QUERY = gql`
 	}
 `;
 
+export const CREATE_COMMENT_QUERY = gql`
+	mutation ($input: CreateCommentInput!) {
+		createComment(input: $input) {
+			id
+			name
+			email
+			body
+		}
+	}
+`;
+
 export const GET_POSTS_QUERY = gql`
 	query ($options: PageQueryOptions) {
 		posts(options: $options) {
